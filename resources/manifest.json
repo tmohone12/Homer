@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "agent": {
+    "id": "gm",
+    "config": "resources/agents/gm/config.yaml",
+    "instructions": "resources/agents/gm/AGENT.md"
+  },
+  "policies": [
+    "resources/policies/authority.md",
+    "resources/policies/narration.md"
+  ]
+}

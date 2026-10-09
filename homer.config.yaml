@@ -1,0 +1,8 @@
+# Host-owned configuration. The browser cannot edit this file.
+# Provider mode also needs an explicit host dispatch grant and credential broker.
+version: 1
+runtimeMode: synthetic
+providerDispatch: false
+resourceManifest: resources/manifest.json
+dataRoot: fixture-data
+credentialRefs: []

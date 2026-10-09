@@ -1,0 +1,1 @@
+{"version":1,"agent":{"id":"assistant","config":"resources/agents/assistant/config.yaml","instructions":"resources/agents/assistant/AGENT.md"},"policies":["resources/policies/authority.md","resources/policies/authoring.md"]}

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:simpleType name="Text"><xs:restriction base="xs:token"><xs:minLength value="1"/><xs:maxLength value="1200"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="Kind"><xs:restriction base="xs:string">
+    <xs:enumeration value="values"/><xs:enumeration value="status"/>
+    <xs:enumeration value="etiquette"/><xs:enumeration value="speech"/>
+    <xs:enumeration value="custom"/><xs:enumeration value="taboo"/>
+    <xs:enumeration value="worldview"/>
+  </xs:restriction></xs:simpleType>
+  <xs:complexType name="Source">
+    <xs:attribute name="document" type="Text" use="required"/>
+    <xs:attribute name="anchor" type="Text" use="required"/>
+    <xs:attribute name="revision" type="Text" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="Scope">
+    <xs:attribute name="region" type="Text"/>
+    <xs:attribute name="era" type="Text"/>
+    <xs:attribute name="social_group" type="Text"/>
+    <xs:attribute name="situation" type="Text"/>
+  </xs:complexType>
+  <xs:complexType name="Cue">
+    <xs:sequence>
+      <xs:element name="applies" type="Scope"/>
+      <xs:element name="behavior" type="Text"/>
+      <xs:element name="exception" type="Text" minOccurs="0" maxOccurs="32"/>
+      <xs:element name="source" type="Source" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:NCName" use="required"/>
+    <xs:attribute name="kind" type="Kind" use="required"/>
+    <xs:attribute name="salience" default="medium"><xs:simpleType><xs:restriction base="xs:string">
+      <xs:enumeration value="high"/><xs:enumeration value="medium"/><xs:enumeration value="low"/>
+    </xs:restriction></xs:simpleType></xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="Norm">
+    <xs:simpleContent><xs:extension base="Text">
+      <xs:attribute name="kind" type="Kind" use="required"/>
+    </xs:extension></xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="Variant">
+    <xs:sequence>
+      <xs:element name="scope" type="Scope"/>
+      <xs:element name="norm" type="Norm" minOccurs="0" maxOccurs="32"/>
+      <xs:element name="cue" type="Cue" minOccurs="0" maxOccurs="32"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:NCName" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="Culture">
+    <xs:sequence>
+      <xs:element name="source" type="Source"/>
+      <xs:element name="scope" type="Scope" minOccurs="0"/>
+      <xs:element name="inherits" minOccurs="0" maxOccurs="32"><xs:complexType>
+        <xs:attribute name="culture_ref" type="xs:NCName" use="required"/>
+      </xs:complexType></xs:element>
+      <xs:element name="related" minOccurs="0" maxOccurs="32"><xs:complexType>
+        <xs:attribute name="kind" type="Text" use="required"/>
+        <xs:attribute name="ref" type="Text" use="required"/>
+      </xs:complexType></xs:element>
+      <xs:element name="norm" type="Norm" minOccurs="0" maxOccurs="32"/>
+      <xs:element name="cue" type="Cue" minOccurs="0" maxOccurs="32"/>
+      <xs:element name="variant" type="Variant" minOccurs="0" maxOccurs="32"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:NCName" use="required"/>
+    <xs:attribute name="name" type="Text" use="required"/>
+    <xs:attribute name="revision" type="Text" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="Affiliation">
+    <xs:attribute name="culture_ref" type="xs:NCName" use="required"/>
+    <xs:attribute name="variant_ref" type="xs:NCName"/>
+    <xs:attribute name="relation" use="required"><xs:simpleType><xs:restriction base="xs:string">
+      <xs:enumeration value="upbringing"/><xs:enumeration value="membership"/><xs:enumeration value="exposure"/>
+    </xs:restriction></xs:simpleType></xs:attribute>
+    <xs:attribute name="familiarity" type="Text" use="required"/>
+    <xs:attribute name="identification" type="Text" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="Deviation">
+    <xs:simpleContent><xs:extension base="Text">
+      <xs:attribute name="culture_ref" type="xs:NCName" use="required"/>
+      <xs:attribute name="cue_ref" type="xs:NCName" use="required"/>
+    </xs:extension></xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="character_prompt"><xs:complexType><xs:sequence><xs:element name="cultures" minOccurs="0"><xs:complexType><xs:sequence><xs:element name="culture" type="Culture" maxOccurs="16"/></xs:sequence></xs:complexType></xs:element><xs:element name="character"><xs:complexType><xs:sequence><xs:element name="source" type="Source"/><xs:element name="name" minOccurs="0" maxOccurs="16"><xs:complexType><xs:simpleContent><xs:extension base="xs:string"><xs:attribute name="id" type="xs:NCName" use="required"/><xs:attribute name="kind" use="required"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="primary"/><xs:enumeration value="alias"/></xs:restriction></xs:simpleType></xs:attribute></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="appearance" minOccurs="0" maxOccurs="16"><xs:complexType><xs:simpleContent><xs:extension base="xs:string"><xs:attribute name="id" type="xs:NCName" use="required"/><xs:attribute name="status" use="required"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="known"/><xs:enumeration value="unknown"/><xs:enumeration value="none"/></xs:restriction></xs:simpleType></xs:attribute><xs:attribute name="ref" type="Text" use="optional"/><xs:attribute name="as_of" type="Text" use="optional"/><xs:attribute name="expires_after" type="Text" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="current" minOccurs="0" maxOccurs="16"><xs:complexType><xs:simpleContent><xs:extension base="xs:string"><xs:attribute name="id" type="xs:NCName" use="required"/><xs:attribute name="kind" use="required"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="location"/><xs:enumeration value="title_role"/><xs:enumeration value="condition"/><xs:enumeration value="allegiance"/><xs:enumeration value="emotion"/></xs:restriction></xs:simpleType></xs:attribute><xs:attribute name="status" use="required"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="known"/><xs:enumeration value="unknown"/><xs:enumeration value="none"/></xs:restriction></xs:simpleType></xs:attribute><xs:attribute name="ref" type="Text" use="optional"/><xs:attribute name="as_of" type="Text" use="optional"/><xs:attribute name="expires_after" type="Text" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="affiliation" type="Affiliation" minOccurs="0" maxOccurs="16"/><xs:element name="deviation" type="Deviation" minOccurs="0" maxOccurs="16"/></xs:sequence><xs:attribute name="id" type="xs:NCName" use="required"/><xs:attribute name="revision" type="xs:positiveInteger" use="required"/><xs:attribute name="control" use="required"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="player"/><xs:enumeration value="npc"/></xs:restriction></xs:simpleType></xs:attribute><xs:attribute name="controller_ref" type="xs:NCName" use="optional"/></xs:complexType></xs:element></xs:sequence><xs:attribute name="schema_version" use="required"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="1"/></xs:restriction></xs:simpleType></xs:attribute><xs:attribute name="projection" use="required"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="prompt"/></xs:restriction></xs:simpleType></xs:attribute><xs:attribute name="view" use="required"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="gm"/><xs:enumeration value="character"/></xs:restriction></xs:simpleType></xs:attribute><xs:attribute name="viewer_ref" type="xs:NCName" use="optional"/><xs:attribute name="scene_ref" type="xs:NCName" use="required"/><xs:attribute name="trust" use="required"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="data"/></xs:restriction></xs:simpleType></xs:attribute></xs:complexType><xs:unique name="cultureIds"><xs:selector xpath="cultures/culture"/><xs:field xpath="@id"/></xs:unique><xs:unique name="characterEntryIds"><xs:selector xpath="character/*"/><xs:field xpath="@id"/></xs:unique></xs:element></xs:schema>

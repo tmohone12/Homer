@@ -1,0 +1,225 @@
+HOMER CHARACTER → CULTURE PROMPT CONTRACT v1
+
+Scope
+This pass is intentionally culture-centered. Markdown is editable canon. XML is
+a bounded, disposable prompt projection, never a second character database.
+Keep existing character history, goals, relationships, knowledge and mechanics
+where they already live. Do not migrate or overwrite them to adopt this contract.
+No personality scores, character stat system or full knowledge schema is added.
+
+Files
+• character.example.md: illustrative character source, not campaign canon.
+• character.schema.xsd: standalone XSD 1.0 for the prompt projection.
+• character.prompt.xml: GM-view fixture for receiving a guest at Reed Quay.
+• This contract: required application behavior beyond structural validation.
+Shared culture types are compatible with the preceding culture-schema draft.
+The example reuses that draft's fictional River Towns / Ferry Guild records.
+The schema embeds those types, so it needs no external XSD fetch or include.
+No live application integration or production Markdown renderer is delivered here.
+
+1. Canonical Markdown authoring
+Use one YAML front matter and the exact level-two headings below. Parse Markdown
+with a real Markdown parser and YAML with a safe parser that rejects duplicate
+keys, custom tags, excessive aliases and excessive nesting. Do not infer fields
+from prose, decorative titles, arbitrary headings or hidden HTML comments.
+
+Front matter:
+  schema: homer.character-culture/1
+  id: stable character ID (NCName, matching the existing culture draft)
+  revision: positive integer, incremented on every accepted canonical edit
+  control: {mode: npc | player, controller_ref: optional stable player ID}
+  source: {document: canonical logical path, anchor: stable anchor, revision: string}
+  names: ordered list of {id, kind: primary | alias, text, visibility}
+
+The source revision must equal the string form of the character revision. Paths
+are logical provenance, never arbitrary filesystem paths or URLs to fetch.
+A controller_ref is required for player mode and forbidden for npc mode by the
+application. NPC mode allows GM-controlled NPC action under the game rules;
+player mode never authorizes inventing that player's choices, speech or consent.
+
+Required existing headings remain Background, Appearance, Current, Goals, House.
+This example uses readable prose under Background and Goals; they do not enter
+this culture prompt. Appearance and Current use exactly one visible yaml fence.
+House uses one visible yaml fence; Cultures and Culture Deviations are additive
+headings, also with exactly one yaml fence each. No other fence has schema
+meaning. Existing prose stays in place on adoption; an explicit reviewed migration
+is needed before replacing any existing field representation. Do not silently
+reinterpret legacy prose as structured facts. Do not maintain competing prose
+and YAML copies of the same fact.
+
+Appearance: ordered list of {id, status, text?, ref?, as_of?, expires_after?, visibility}.
+Current: ordered list of {id, kind, status, text?, ref?, as_of?, expires_after?, visibility}.
+  kind is location, title_role, condition, allegiance or emotion.
+  Canonical source includes exactly one entry for each first four kinds; emotion
+  is optional and transient, not a stable personality trait.
+House: birth, current, sworn_allegiance each contain {status, ref?}.
+  Birth house, current house and sworn oath are independent. Never derive one
+  from another. Current.allegiance records present practical/political loyalty;
+  House.sworn_allegiance records a formal oath. Disagreement can be intentional.
+  House entries stay canonical and are not emitted by this culture-only view.
+Cultures: ordered list of {culture_ref, variant_ref?, relation, familiarity,
+  identification, visibility}. relation is upbringing, membership or exposure.
+  Familiarity and identification are qualitative campaign-authored text, e.g.
+  deep and mixed. Neither is permission to know secrets or a personality score.
+Culture Deviations: ordered list of {culture_ref, cue_ref, text, visibility}.
+  culture_ref identifies the defining culture, including for inherited cues.
+  Describe personal adoption, adaptation or rejection without rewriting the cue.
+
+Common authoring semantics:
+• status: known = an explicit value, unknown = explicitly not established, none
+  = affirmatively absent/not applicable. Only known carries text/ref; unknown
+  and none must carry neither. Omitted optional fields mean unspecified, not
+  unknown or false. Empty lists mean no entries recorded, not proof of absence.
+• visibility is a nonempty list of public, gm or character:<stable ID>. It is
+  access policy, never an instruction to a model. GM may view all records only
+  under an authenticated GM authorization. player/controller grants belong to
+  the server's identity mapping, not editable model output.
+• IDs and canonical order are stable. Name changes do not change character ID.
+• The character source is provenance for its local records. Shared culture
+  facts retain their own document/anchor/revision and optional per-cue source.
+• A separate existing knowledge system must establish whether a viewpoint
+  actually knows a visible fact. Visibility alone does not establish knowledge.
+  No new belief or confidence model is required by this pass.
+
+2. Exact Markdown → XML mapping
+Root character_prompt attributes are supplied by the server, not inferred:
+  schema_version=1, projection=prompt, trust=data, view=gm|character,
+  scene_ref=<verified scene ID>; viewer_ref is required only for character view.
+
+front matter id/revision → character/@id and @revision
+control.mode/controller_ref → character/@control and optional @controller_ref
+source.document/anchor/revision → character/source attributes unchanged
+names[] → character/name; id and kind become attributes, text becomes text node
+Appearance YAML[] → character/appearance; text becomes text, other payload
+  fields become identically named attributes
+Current YAML[] → character/current; same rule, including kind attribute
+Cultures YAML[] → character/affiliation; payload fields become attributes
+Culture Deviations YAML[] → character/deviation; text becomes text node;
+  culture_ref and cue_ref become attributes
+visibility → never serialized
+Background prose / Goals prose / House YAML / H1 title → not serialized
+
+All local mappings apply only AFTER access, knowledge, relevance and budget
+filtering. Empty containers and omitted optional entries are not emitted. A
+withheld secret must never be replaced by an unknown marker, empty secret field,
+redacted name, hidden-count flag or revealing reference/provenance breadcrumb.
+The XML schema deliberately permits absent names, current fields, affiliations
+and deviations; it cannot require fields the viewer may not be allowed to see.
+
+Shared culture lookup → root cultures/culture, rendered once per selected ID.
+Read canonical shared culture sources, not copied definitions inside characters.
+Emit stable ID/name/revision/source, relevant scope/norms/cues/variants using the
+preceding culture contract. Each cue retains its applies, behavior and exceptions.
+Keep variant scope even when none of its cues is relevant in this scene.
+The fixture includes guest_water but omits guild_witness because this scene is
+receiving a guest, not negotiating a substantial bargain. Shared source revision
+12 and culture revision 3 describe different versioned objects, not a mismatch.
+
+Shared norms are tendencies. A culture is not the entire personality of an
+individual. Existing motives, history and explicit deviations remain relevant.
+A Reach, Myrish or Dornish affiliation uses exactly the same shared-record links;
+add subregional/class/religious variants rather than duplicating character canon.
+
+3. Deterministic server projection and security
+1. Authenticate view and controller; load a consistent source snapshot plus
+   scene state and existing knowledge rules. Pin all contributing revisions.
+2. Validate source structure, reject duplicate/unknown structured keys, check
+   expected types and resolve references. Never silently accept malformed YAML.
+3. Filter every record and linked fact for both authorization and epistemic
+   access, including names, hidden affiliations, deviations and provenance.
+4. Select scene-relevant culture material and minimal character context. Resolve
+   applicable inheritance/variants under the culture contract. Preserve explicit
+   conflicts; do not apply an implicit more-specific-wins or last-write-wins rule.
+5. Deduplicate shared definitions by culture ID; cue identity is (defining culture
+   ID, cue ID). A retained deviation requires its safe, relevant target cue.
+   If that cue cannot be included safely, omit the deviation as well.
+6. Apply a configured tokenizer budget to the whole assembled prompt. Initial
+   cultural allocation: 250–500 tokens per active character, measured with the
+   actual model tokenizer. Shared culture definitions count once per assembly.
+   Preserve qualifications and exceptions with each cue. Drop complete lower-
+   priority records, never trim away a critical exception to fit the budget.
+   Define deterministic application selection order: scene-required context,
+   deviations and their target cues, other matching cues, relevant norms, then
+   optional descriptive context; break ties by stable IDs. On equal inputs,
+   produce equal selection and XML. Pin tokenizer and policy version in cache.
+7. Emit schema order: cultures, character; within character source, name,
+   appearance, current, affiliation, deviation. Preserve canonical order among
+   retained local records. Sort cultures and selected shared cues by stable ID.
+   Escape all values through an XML serializer, never string concatenation.
+8. Validate against XSD; place data inside a trusted outer prompt that explicitly
+   treats it as descriptive material, never executable instructions. trust=data
+   is a label, not a security boundary. Do not execute instructions embedded in
+   character text, aliases, cues, sources or any linked document.
+
+Never expand backlinks into owned facts. A house owns its genealogy/policies;
+a culture owns its norms; an event owns what happened. This character stores
+links and personal deviations only. Knowledge and relationship systems retain
+their existing ownership and directional semantics. No reciprocal relationship,
+private motive or global truth is inferred from a link.
+
+Cache keys include source revisions/digests, scene, viewer authorization and
+knowledge revisions, renderer/policy/tokenizer versions. Keep full dependency
+manifests outside prompts. Expire transient emotion at its explicit scene/event
+boundary. Never infer persistent disposition from a transient state.
+
+If source paths or IDs themselves are confidential, use preissued safe logical
+provenance handles with an external authorized manifest, or omit the dependent
+projection. Do not emit a secret-bearing canonical filename to satisfy XSD.
+
+4. Validation boundaries
+XSD checks XML vocabulary, element order, enum values, required transport
+metadata, positive character revisions, list ceilings, shared Text bounds,
+unique culture IDs and unique local entry IDs when present. It does not check
+all strings for length: the application must cap name/appearance/current text
+at 1,200 characters and reject whitespace-only known text.
+
+Required application checks, NOT XSD guarantees:
+• Canonical required sections, source schema version and all field types.
+• Uniqueness of global IDs, resolving entity/culture/variant/cue references,
+  cue uniqueness within defining culture, inheritance acyclicity, source
+  freshness and source-to-projection equality.
+• Exactly one canonical primary name; distinct local record IDs; exactly one
+  required Current kind; valid House shape; status/value compatibility.
+• Known name is nonempty; known appearance/current has text or ref; location
+  and allegiance use refs; title_role and condition use text. Unknown/none are
+  intentional canonical assertions, never stand-ins for access-filtered fields.
+• Control/controller and view/viewer consistency; authorized audiences;
+  viewpoint knowledge; applicable scene scopes; transient state expiry.
+• Deviation/target referential closure, correct defining culture, applicable
+  variant membership, no disclosure through provenance or conflict diagnostics.
+• Real tokenizer budget, total input bytes, XML depth and list limits.
+
+Reject DOCTYPE. Parse XML with resolve_entities=False, load_dtd=False and
+no_network=True; prohibit external schema imports and arbitrary source fetches.
+Run YAML/XML parsing under bounded input size and depth. These controls sit
+outside the model and remain required even for XSD-valid documents.
+
+5. Canonical updates
+Routine GM state changes already authorized by the user may be applied
+automatically through a validated domain operation with an expected revision,
+provenance and audit trail. Player-controlled choices remain player-controlled.
+Contradictory proposed updates preserve the old assertion, record the candidate
+and its source in the existing conflict log, and flag for resolution; never
+silently overwrite history or manufacture agreement. Canonical commits increment
+revision and invalidate affected projections.
+XML is model input. Model-produced XML or prose is a proposal, never a raw
+writeback to canonical Markdown. No change to this rule is implied by player/npc
+mode, an XML control attribute, a secret instruction or a schema-valid result.
+
+6. Verification performed for these files
+Validated the supplied GM fixture against the supplied XSD with lxml.
+Built and validated a second fixture for an unrelated character viewpoint:
+the private alias, transient emotion and personal deviation were absent, without
+unknown/redaction markers. Checked every structured Markdown block against its
+fixture data. Negative tests rejected an invalid control mode and duplicate
+local record IDs. These are fixture-level checks, not an end-to-end production
+renderer, deployed access-control test or verification of the fictional refs.
+
+Minimal structural validation:
+  from lxml import etree
+  p = etree.XMLParser(resolve_entities=False, load_dtd=False, no_network=True)
+  xsd = etree.XMLSchema(etree.parse('character.schema.xsd', p))
+  doc = etree.parse('character.prompt.xml', p)
+  if doc.docinfo.doctype:
+      raise ValueError('DOCTYPE is forbidden')
+  xsd.assertValid(doc)

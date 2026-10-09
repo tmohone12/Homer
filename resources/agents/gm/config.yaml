@@ -1,0 +1,6 @@
+# Bounded YAML configuration: explicit scalar fields only; no includes or aliases.
+version: 1
+id: gm
+name: "Homer roleplay GM"
+enabled: true
+appendAuthorStyle: true

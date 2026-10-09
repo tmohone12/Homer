@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Entirely illustrative fiction; not ASOIAF or campaign canon. -->
+<culture_context schema_version="1" projection="prompt" trust="data">
+  <cultures>
+    <culture id="river_towns" name="River Towns" revision="3">
+      <source document="campaign/cultures.md" anchor="river-towns" revision="12"/>
+      <scope region="Lower River" era="Present campaign"/>
+      <related kind="religion" ref="river_shrines"/>
+      <related kind="house" ref="house_reedbank"/>
+      <norm kind="values">Many prize reciprocity and keeping public promises.</norm>
+      <norm kind="status">Standing often follows service and reliable trade.</norm>
+      <norm kind="speech">Concrete examples are common; formality varies with social distance.</norm>
+      <norm kind="taboo">Breaking an accepted guest pledge often invites disapproval.</norm>
+      <norm kind="worldview">Many describe the river as a shared obligation.</norm>
+      <cue id="guest_water" kind="etiquette" salience="high">
+        <applies situation="receiving a guest"/>
+        <behavior>Offer water before asking the visitor's purpose.</behavior>
+        <exception>Danger, scarcity, or personal hostility may interrupt this.</exception>
+      </cue>
+      <variant id="ferry_guild">
+        <scope region="Ferry crossings" social_group="Guild households"/>
+        <cue id="guild_witness" kind="custom" salience="medium">
+          <applies situation="negotiating a substantial bargain"/>
+          <behavior>Prefer a named witness before treating terms as settled.</behavior>
+          <exception>Trusted partners sometimes make private agreements.</exception>
+        </cue>
+      </variant>
+    </culture>
+  </cultures>
+  <character id="mara">
+    <affiliation culture_ref="river_towns" variant_ref="ferry_guild"
+      relation="upbringing" familiarity="deep" identification="mixed"/>
+    <deviation culture_ref="river_towns" cue_ref="guest_water">
+      Follows the custom with strangers; deliberately skips it with an estranged sibling.
+    </deviation>
+  </character>
+</culture_context>

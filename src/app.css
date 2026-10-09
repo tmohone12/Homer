@@ -1,0 +1,500 @@
+@import 'tailwindcss';
+
+/* =============================================
+   MTHERIOS THEME — The living library
+   Forest ink, warm paper, aged brass
+   ============================================= */
+
+@theme {
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-ring: var(--ring);
+
+	/* Surface scale (dark → light) */
+	--color-surface-50: #eeece4;
+	--color-surface-100: #dcded3;
+	--color-surface-200: #bec2b6;
+	--color-surface-300: #a9ae9f;
+	--color-surface-400: #92998a;
+	--color-surface-500: #5d6758;
+	--color-surface-600: #354035;
+	--color-surface-700: #283027;
+	--color-surface-800: #20271f;
+	--color-surface-850: #191e18;
+	--color-surface-900: #141813;
+	--color-surface-950: #101310;
+
+	/* Gold accent scale */
+	--color-gold-50: #fef9e7;
+	--color-gold-100: #fdf0c4;
+	--color-gold-200: #f5e08a;
+	--color-gold-300: #f0d078;
+	--color-gold-400: #c6a66c;
+	--color-gold-500: #b79860;
+	--color-gold-600: #a78a53;
+	--color-gold-700: #5c4f30;
+	--color-gold-800: #3d3520;
+	--color-gold-900: #1f1a10;
+
+	/* Crimson accent */
+	--color-crimson-50: #fce8ec;
+	--color-crimson-400: #c26676;
+	--color-crimson-500: #a94a5a;
+	--color-crimson-600: #722536;
+	--color-crimson-900: #2d0e14;
+}
+
+:root {
+	color-scheme: dark;
+	--shadow-panel: 0 18px 60px rgba(0, 0, 0, 0.28);
+	--sage: #a6b598;
+	--text-on-accent: #171b13;
+	--font-ui: 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+	--bg-reader: #151a16;
+	--text-reader: #d6d8cc;
+	--danger: #a94a5a;
+	--success: #6f9c7b;
+	/* Semantic tokens shared by every workspace */
+	--radius: 0.625rem;
+	--background: #101310;
+	--foreground: #eeece4;
+
+	--card: #191e18;
+	--card-foreground: #eeece4;
+
+	--popover: #20271f;
+	--popover-foreground: #eeece4;
+
+	--primary: #c6a66c;
+	--primary-foreground: #101310;
+
+	--secondary: #20271f;
+	--secondary-foreground: #eeece4;
+
+	--muted: #20271f;
+	--muted-foreground: #92998a;
+
+	--accent: #20271f;
+	--accent-foreground: #c6a66c;
+
+	--destructive: #a94a5a;
+	--destructive-foreground: #eeece4;
+
+	--border: rgba(226, 232, 212, 0.14);
+	--input: #20271f;
+	--ring: #c6a66c;
+
+	/* Semantic layout colors */
+	--bg-primary: #101310;
+	--bg-secondary: #191e18;
+	--bg-tertiary: #20271f;
+	--bg-elevated: #283027;
+	--text-primary: #eeece4;
+	--text-secondary: #bec2b6;
+	--text-muted: #92998a;
+	--text-accent: #c6a66c;
+	--border-primary: rgba(226, 232, 212, 0.14);
+	--border-secondary: rgba(226, 232, 212, 0.08);
+
+	/* Scrollbar */
+	--scrollbar-track: transparent;
+	--scrollbar-thumb: hsl(35 10% 28%);
+	--scrollbar-thumb-hover: hsl(42 30% 45%);
+
+	/* Story font */
+	--font-story: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+	--font-display: 'Palatino Linotype', 'Iowan Old Style', Georgia, serif;
+	--font-mono: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+}
+
+/* =============================================
+   BASE STYLES
+   ============================================= */
+@layer base {
+	* {
+		@apply border-border;
+	}
+
+	html,
+	body {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		overscroll-behavior: none;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+		font-family: var(--font-ui);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	/* Scrollbar */
+	::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+	::-webkit-scrollbar-track {
+		background-color: var(--scrollbar-track);
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: var(--scrollbar-thumb);
+		border-radius: 3px;
+		border: 1px solid var(--bg-primary);
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background-color: var(--scrollbar-thumb-hover);
+	}
+	::-webkit-scrollbar-corner {
+		background-color: transparent;
+	}
+
+	/* Hide scrollbars on mobile */
+	@media (max-width: 639px) {
+		::-webkit-scrollbar {
+			display: none;
+			width: 0;
+			height: 0;
+		}
+		* {
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+		}
+
+		input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='file']),
+		textarea,
+		select {
+			font-size: 16px !important;
+			min-height: 44px;
+		}
+
+		.prose-mtherios {
+			font-size: clamp(1.125rem, 4.7vw, 1.1875rem) !important;
+			line-height: 1.68 !important;
+		}
+	}
+}
+
+/* =============================================
+   ATMOSPHERIC EFFECTS
+   ============================================= */
+@layer utilities {
+	.app-shell {
+		/* Safari may scroll the document when the keyboard opens. Keep the shell
+		   anchored to the visible viewport, outside that document flow. */
+		position: fixed;
+		top: var(--visual-viewport-offset-top, 0px);
+		left: 0;
+		right: 0;
+		padding-top: env(safe-area-inset-top, 0px);
+		height: var(--visual-viewport-height, 100dvh);
+	}
+
+	.settings-modal-shell {
+		height: 100dvh;
+		max-height: 100dvh;
+		padding-top: env(safe-area-inset-top, 0px);
+		padding-bottom: env(safe-area-inset-bottom, 0px);
+	}
+
+	@media (min-width: 640px) {
+		.settings-modal-shell {
+			height: min(92dvh, 800px);
+			max-height: min(92dvh, 800px);
+		}
+	}
+
+	/* Grain texture overlay */
+	.grain-overlay {
+		position: fixed;
+		inset: 0;
+		pointer-events: none;
+		z-index: 1000;
+		opacity: 0.012;
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+	}
+
+	/* Cathedral light glow */
+	.cathedral-glow {
+		position: fixed;
+		top: -30%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 70vw;
+		height: 70vh;
+		background: radial-gradient(ellipse at center, rgba(212, 174, 104, 0.035) 0%, transparent 65%);
+		pointer-events: none;
+		z-index: 0;
+		animation: breathe 14s ease-in-out infinite;
+	}
+
+	/* Parchment panel surface */
+	.parchment-surface {
+		background-image:
+			linear-gradient(180deg, hsla(35, 20%, 92%, 0.01) 0%, transparent 40%),
+			url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+	}
+
+	@keyframes breathe {
+		0%, 100% { opacity: 0.4; }
+		50% { opacity: 0.7; }
+	}
+
+	/* Display font utility */
+	.font-display {
+		font-family: var(--font-display);
+	}
+
+	.font-story {
+		font-family: var(--font-story);
+	}
+
+	.font-mono {
+		font-family: var(--font-mono);
+	}
+
+	/* Story text */
+	.story-text {
+		font-family: var(--font-story);
+		@apply text-lg leading-relaxed;
+		color: var(--text-secondary);
+	}
+
+	.prose-mtherios {
+		font-family: var(--font-story);
+		font-size: 1.2rem;
+		line-height: 1.8;
+		color: var(--text-reader);
+		text-wrap: pretty;
+		font-weight: 400;
+	}
+
+	.prose-mtherios p + p { margin-top: 1em; }
+
+	.ios-glass {
+		background: color-mix(in srgb, var(--bg-secondary) 84%, transparent);
+		backdrop-filter: blur(18px) saturate(130%);
+		-webkit-backdrop-filter: blur(18px) saturate(130%);
+	}
+
+	.user-action {
+		@apply font-medium;
+		color: var(--text-accent);
+	}
+
+	/* Gold glow effect */
+	.gold-glow {
+		box-shadow: 0 0 20px rgba(212, 168, 83, 0.2);
+	}
+
+	.gold-glow-strong {
+		box-shadow: 0 0 40px rgba(212, 168, 83, 0.35);
+	}
+
+	/* Streaming cursor */
+	.streaming-cursor {
+		display: inline-block;
+		width: 0.5em;
+		height: 1em;
+		background-color: currentColor;
+		opacity: 0.7;
+		animation: blink 1s step-end infinite;
+		vertical-align: text-bottom;
+		margin-left: 1px;
+	}
+
+	@keyframes blink {
+		0%, 100% { opacity: 0.7; }
+		50% { opacity: 0; }
+	}
+
+	/* ── Dialogue highlighting (SillyTavern style) ── */
+	.dialogue {
+		color: #a8e6a1;
+		font-weight: 600;
+		font-style: normal;
+		text-shadow: 0 0 10px rgba(168, 230, 161, 0.16);
+	}
+
+	/* ── Dice Roll Cards ── */
+	.dice-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
+		margin: 8px 0;
+		padding: 12px 16px;
+		border-radius: 12px;
+		border: 1px solid;
+		font-family: var(--font-display);
+		text-align: center;
+	}
+
+	.dice-card.dice-pass {
+		border-color: rgba(74, 222, 128, 0.25);
+		background: rgba(74, 222, 128, 0.06);
+	}
+
+	.dice-card.dice-fail {
+		border-color: rgba(248, 113, 113, 0.25);
+		background: rgba(248, 113, 113, 0.06);
+	}
+
+	.dice-card.dice-crit-success {
+		border-color: rgba(250, 204, 21, 0.4);
+		background: linear-gradient(135deg, rgba(250, 204, 21, 0.08), rgba(74, 222, 128, 0.08));
+		box-shadow: 0 0 20px rgba(250, 204, 21, 0.12);
+	}
+
+	.dice-card.dice-crit-failure {
+		border-color: rgba(239, 68, 68, 0.4);
+		background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(168, 50, 50, 0.08));
+		box-shadow: 0 0 20px rgba(239, 68, 68, 0.12);
+	}
+
+	.dice-card-header {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 10px;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--color-surface-300);
+	}
+
+	.dice-card-icon {
+		font-size: 16px;
+		line-height: 1;
+	}
+
+	.dice-card-body {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+	}
+
+	.dice-card-total {
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 1;
+		color: var(--color-surface-50);
+	}
+
+	.dice-pass .dice-card-total { color: #4ade80; }
+	.dice-fail .dice-card-total { color: #f87171; }
+	.dice-crit-success .dice-card-total { color: #facc15; }
+	.dice-crit-failure .dice-card-total { color: #ef4444; }
+
+	.dice-card-detail {
+		font-size: 11px;
+		color: var(--color-surface-300);
+		font-family: var(--font-mono);
+	}
+
+	.dice-card-outcome {
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+	}
+
+	.dice-pass .dice-card-outcome { color: #4ade80; }
+	.dice-fail .dice-card-outcome { color: #f87171; }
+	.dice-crit-success .dice-card-outcome { color: #facc15; }
+	.dice-crit-failure .dice-card-outcome { color: #ef4444; }
+
+	.dice-card-desc {
+		font-size: 11px;
+		color: var(--color-surface-400);
+		font-style: italic;
+		font-family: var(--font-story);
+	}
+
+	/* Player /roll result (system entry) */
+	.dice-player-roll {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		padding: 8px 16px;
+		border-radius: 10px;
+		border: 1px solid rgba(212, 168, 83, 0.2);
+		background: rgba(212, 168, 83, 0.06);
+		font-family: var(--font-mono);
+		font-size: 12px;
+		color: var(--color-gold-400);
+		text-align: center;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		scroll-behavior: auto !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+@media (max-width: 639px) {
+	body.keyboard-open .mobile-hud { display: none; }
+	[role='group'] > .flex:last-child { opacity: 0.38; }
+	[role='group']:focus-within > .flex:last-child { opacity: 1; }
+	[role='group'] > .flex:last-child button { min-width: 44px; min-height: 44px; }
+}
+
+
+/* Shared interaction and page rhythm. Individual screens own their layout. */
+@layer base {
+	::selection { background: color-mix(in srgb, var(--primary) 30%, transparent); color: var(--foreground); }
+	button, summary, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+	button:not(:disabled), summary { cursor: pointer; }
+	button:disabled { cursor: not-allowed; }
+	:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+	input, textarea, select { accent-color: var(--primary); }
+	input::placeholder, textarea::placeholder { color: var(--text-muted); opacity: .8; }
+	dialog { color: var(--text-primary); }
+}
+
+@layer components {
+	.workspace-page { padding: clamp(20px, 3.4vw, 44px); }
+	.workspace-page-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+	.workspace-page-heading h2 { font: 400 clamp(26px, 3vw, 36px)/1.15 var(--font-display); letter-spacing: -.025em; color: var(--text-primary); }
+	.workspace-eyebrow { margin-bottom: 10px; font-size: 9px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--text-accent); }
+	.workspace-subtitle { margin-top: 9px; color: var(--text-secondary); font-size: 12px; line-height: 1.65; }
+	.workspace-refresh { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 10px 14px; border: 1px solid var(--border-primary); border-radius: 7px; color: var(--text-secondary); font-size: 12px; }
+	.workspace-refresh:hover { color: var(--text-accent); background: var(--bg-tertiary); }
+	.workspace-refresh:disabled { opacity: .45; }
+}
+
+@layer components {
+	.diagnostic-page { max-width: 1250px; margin: 0 auto; }
+	.diagnostic-page > .rounded-xl { padding: 26px; margin-bottom: 20px; border-radius: 10px; background: var(--bg-secondary); }
+	.diagnostic-page > .rounded-xl > .flex { padding-bottom: 16px; margin-bottom: 20px; border-bottom: 1px solid var(--border-secondary); }
+	.diagnostic-page > .rounded-xl .font-display { font: 500 14px var(--font-ui); letter-spacing: 0; color: var(--text-primary); }
+	.diagnostic-page .grid > div > div:last-child { margin-top: 8px; font-size: 22px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+	.diagnostic-page .grid { gap: 26px; }
+	@media (max-width: 639px) { .diagnostic-page > .rounded-xl { padding: 20px; } .diagnostic-page .grid > div > div:last-child { font-size: 18px; } }
+}

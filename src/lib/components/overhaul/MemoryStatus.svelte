@@ -1,0 +1,7 @@
+<script>
+ let {status,api,guarded,busy=false}=$props();
+ let current=$state(null);
+ const shown=$derived(current||status);
+</script>
+<section aria-label="Memory index status"><h2>Memory coverage</h2>{#if shown}<p id="memory-binding-status">{shown.status} · {shown.execution}</p><p>{shown.coveredSourceCount} scoped source files verified · {shown.indexedSourceCount} files indexed for the last successful snapshot · {shown.stale?'refresh/index needed':'current'}</p><p>{shown.workerExecutionEnabled?'A host process binding is enabled.':'Worker execution is disabled in this preview. Queries fall back to canonical scoped search.'}</p><p>{shown.indexMode}. Package chunk coverage: unknown.</p>{#if shown.lastError}<p>{shown.lastError.message}</p>{/if}<details><summary>Source refresh and scope</summary><p>Scope {shown.scope} · refresh {shown.refreshRevision}</p><pre>{JSON.stringify({delta:shown.delta,snapshotHash:shown.snapshotHash,indexedSnapshotHash:shown.indexedSnapshotHash},null,2)}</pre></details>{/if}<button id="memory-refresh-status" disabled={busy} onclick={()=>guarded(async()=>current=await api({intent:'memoryStatus'}))}>Refresh coverage status</button></section>
+<style>p{line-height:1.6}pre{white-space:pre-wrap;overflow-wrap:anywhere}button{min-height:44px;padding:10px;background:#182219;color:#e7d9bb;border:1px solid #3d4937;border-radius:5px}h2{font-family:Georgia,serif}</style>

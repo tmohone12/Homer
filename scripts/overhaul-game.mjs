@@ -1,0 +1,6 @@
+// Registered isolated-campaign CLI: does not import legacy app/DB runtime or accept vault/provider paths.
+import {campaignService,fixtureState} from '../src/lib/server/overhaul/service.mjs';
+import {publicRun} from '../src/lib/server/overhaul/engine.mjs';
+import {campaignToolCall} from '../src/lib/server/overhaul/clients.mjs';
+process.env.MYTHENGINE_OVERHAUL_FIXTURE='1';
+try{const args=process.argv.slice(2);let campaignId;if(args[0]==='--campaign'){args.shift();campaignId=args.shift();}const [name='status',argument='{}']=args;if(Buffer.byteLength(argument)>65536)throw Error('Arguments exceed 64 KiB.');const service=await campaignService({sessionId:'cli',campaignId});let result=name==='status'?await fixtureState(service):await campaignToolCall(service,name,JSON.parse(argument));if(name==='campaign_turn'&&['submit','resume','answer'].includes(JSON.parse(argument).intent))result=await service.engine.wait(result.id);if(result?.messages)result=publicRun(result);console.log(JSON.stringify(result));}catch(error){console.error(JSON.stringify({error:error.message,code:error.code||'INVALID_REQUEST'}));process.exitCode=1;}

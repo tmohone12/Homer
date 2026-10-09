@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<character_prompt schema_version="1" projection="prompt" view="gm" scene_ref="quay_evening" trust="data">
+  <cultures><culture id="river_towns" name="River Towns" revision="3">
+      <source document="campaign/cultures.md" anchor="river-towns" revision="12"/>
+      <scope region="Lower River" era="Present campaign"/>
+      <related kind="religion" ref="river_shrines"/>
+      <related kind="house" ref="house_reedbank"/>
+      <norm kind="values">Many prize reciprocity and keeping public promises.</norm>
+      <norm kind="status">Standing often follows service and reliable trade.</norm>
+      <norm kind="speech">Concrete examples are common; formality varies with social distance.</norm>
+      <norm kind="taboo">Breaking an accepted guest pledge often invites disapproval.</norm>
+      <norm kind="worldview">Many describe the river as a shared obligation.</norm>
+      <cue id="guest_water" kind="etiquette" salience="high">
+        <applies situation="receiving a guest"/>
+        <behavior>Offer water before asking the visitor's purpose.</behavior>
+        <exception>Danger, scarcity, or personal hostility may interrupt this.</exception>
+      </cue>
+      <variant id="ferry_guild">
+        <scope region="Ferry crossings" social_group="Guild households"/>
+        </variant>
+    </culture>
+  </cultures>
+  <character id="mara" revision="7" control="npc">
+    <source document="characters/mara.md" anchor="mara" revision="7"/>
+    <name id="primary_name" kind="primary">Mara Reedbank</name>
+    <name id="private_alias" kind="alias">Reed</name>
+    <appearance id="eyebrow_scar" status="known">A pale scar crosses her left eyebrow.</appearance>
+    <current id="location" kind="location" status="known" ref="reed_quay" as_of="arrival_12"/>
+    <current id="role" kind="title_role" status="known">Ferry clerk</current>
+    <current id="condition" kind="condition" status="known">Uninjured, short of sleep</current>
+    <current id="allegiance" kind="allegiance" status="known" ref="quay_council"/>
+    <current id="emotion" kind="emotion" status="known" as_of="arrival_12" expires_after="quay_evening">Wary of the unfamiliar guest.</current>
+    <affiliation culture_ref="river_towns" variant_ref="ferry_guild" relation="upbringing" familiarity="deep" identification="mixed"/>
+    <deviation culture_ref="river_towns" cue_ref="guest_water">Follows the custom with strangers; deliberately skips it with an estranged sibling.</deviation>
+  </character>
+</character_prompt>

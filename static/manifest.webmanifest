@@ -1,0 +1,35 @@
+{
+  "id": "/",
+  "name": "Homer \u2014 Your living epic",
+  "short_name": "Homer",
+  "description": "A private shared-world epic with a chat-first control surface.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101310",
+  "theme_color": "#101310",
+  "categories": [
+    "games",
+    "books",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "/icons/homer-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/homer-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/homer-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

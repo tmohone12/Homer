@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <title>MythEngine</title>
+  <rect width="48" height="48" rx="12" fill="#101310"/>
+  <g fill="none" stroke="#c6a66c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M35 11c-5-3-10-1-14 3L12 27v9l9-2 14-14c3-3 4-6 0-9Z"/>
+    <path d="m10 38 21-21M16 31h9M21 26v-8"/>
+  </g>
+</svg>

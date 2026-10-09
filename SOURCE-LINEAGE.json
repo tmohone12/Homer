@@ -1,0 +1,13 @@
+{
+  "product": "Homer",
+  "snapshotOfLocalCommit": "29dd5b4dbf2fcbe8146195084b9a74d317bc532e",
+  "sourceLineage": "Additive overhaul of MythEngine; selected source dependencies and retirement test fixtures retained.",
+  "historyPolicy": "Fresh initial public snapshot. Local source history and operational evidence preserved separately.",
+  "schemaContractSource": "Exact reviewed direct-source UTF-8 files; no private Library transfer payloads.",
+  "runtimePolicy": "No generated artifacts, credentials, campaign data, account metadata or logs included.",
+  "licensePolicy": "Existing source notices retained. No new license selected.",
+  "publicPackagingChanges": [
+    "Use standard ignored SvelteKit generation directory so a clean checkout builds without pre-existing generated config.",
+    "Create an invented MCP campaign inside its test instead of depending on a private browser qualification receipt."
+  ]
+}

@@ -1,0 +1,1 @@
+export async function hashReaderState(value:{hidden:boolean;text:string|null}):Promise<string>{const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(value)));return Array.from(new Uint8Array(digest)).map(byte=>byte.toString(16).padStart(2,'0')).join('');}

@@ -1,0 +1,6 @@
+import {z} from 'zod';
+const requestSchema=z.object({id:z.string().regex(/^[a-z][a-z0-9_-]{0,60}$/),action:z.literal('story'),text:z.string().min(1).max(2000),actionType:z.enum(['do','say','think','story','pov','free','ooc'])}).strict();
+export const deliveryKey=(sessionId,campaignId)=>'mythengine:overhaul:'+sessionId+':'+campaignId+':pending-delivery';
+export function loadDelivery(storage,key){const value=storage.getItem(key);return value?requestSchema.parse(JSON.parse(value)):null;}
+export function prepareDelivery(storage,key,request){request=requestSchema.parse(request);const previous=loadDelivery(storage,key);if(previous){if(previous.text!==request.text||previous.actionType!==request.actionType)throw Object.assign(Error('Recover the saved action before sending a different one. Your new draft is kept.'),{code:'DELIVERY_PENDING'});return previous;}storage.setItem(key,JSON.stringify(request));return request;}
+export function reconcileDelivery(pending,runs){if(!pending)return null;const run=runs.find(r=>r.id===pending.id);if(!run)return null;if(run.request?.action!=='story'||run.request.text!==pending.text||run.request.actionType!==pending.actionType)throw Object.assign(Error('Saved action ID differs from the server record. Keep the draft for review.'),{code:'OPERATION_CONFLICT'});return run;}

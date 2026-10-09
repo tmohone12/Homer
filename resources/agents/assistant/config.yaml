@@ -1,0 +1,7 @@
+version: 1
+id: assistant
+name: Homer authoring assistant
+enabled: true
+appendAuthorStyle: false
+reviewPolicy: exact-author-review
+tools: ["list_files", "read_range", "read_record", "grep", "recall", "preview_patch", "propose_changes", "ask_author", "delegate_agent", "read_agent_task", "read_turn"]

@@ -1,0 +1,1024 @@
+{
+  "version": 1,
+  "algorithm": "SHA-256; aggregate is UTF-8 ordinal path TAB per-file hash LF",
+  "sourceCheckpoint": "29dd5b4dbf2fcbe8146195084b9a74d317bc532e",
+  "fileCount": 203,
+  "aggregateSha256": "c1b827d7631b4f32c9bf1dd1d1c98904de6dde5afbb088f127ddc121f17648fc",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "d3686ca1743a95f49e8885e40f3bf07835390af02810b65bd8388b8b6d06575c",
+      "bytes": 85
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "bf2558f760e13f11a9e93bd84eca68bbd9e6a4376513a9d513ba9e9cbd900bc5",
+      "bytes": 430
+    },
+    {
+      "path": "README.md",
+      "sha256": "d8d2c0aa1c2136593fda3262ebf1fdbbed6a4b07595b61d4377c196680eeb943",
+      "bytes": 5964
+    },
+    {
+      "path": "SOURCE-LINEAGE.json",
+      "sha256": "0116094bafc31bf47007fe9b80546b002b05469b0a743a76f35a5f22b4383fcd",
+      "bytes": 918
+    },
+    {
+      "path": "homer.config.yaml",
+      "sha256": "7d107aa8dde4f270704a2c6ef9a5c6465d7a410c6324d2f64e8d52053647cefa",
+      "bytes": 287
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "b73649b299f9d27530e5275738691b18d4640b61ebaef3b758357c14c1411e06",
+      "bytes": 195236
+    },
+    {
+      "path": "package.json",
+      "sha256": "cbe810b42f17a9e790a575723b4b56a04e0d3dcf1bd1c8a827672c9d2fde2835",
+      "bytes": 3776
+    },
+    {
+      "path": "resources/agents/assistant/AGENT.md",
+      "sha256": "bf65eeb53619fc43714605807fc5edbc0947b646588443243a377745c4e8b9ec",
+      "bytes": 1374
+    },
+    {
+      "path": "resources/agents/assistant/config.yaml",
+      "sha256": "8cb7868d9020d6618577d70456e818dd55e85b1a9d02582d30cc1cc7c9a50579",
+      "bytes": 299
+    },
+    {
+      "path": "resources/agents/assistant/manifest.json",
+      "sha256": "36d512bdd75f85afb7721d75b31e8e2e5f1214141be893f71ac195dc59023266",
+      "bytes": 225
+    },
+    {
+      "path": "resources/agents/gm/AGENT.md",
+      "sha256": "2a804f6ea723946708f497c01c0e20a1112e490c37f49830ed1d0abec9aba196",
+      "bytes": 1351
+    },
+    {
+      "path": "resources/agents/gm/config.yaml",
+      "sha256": "48e0fca341ee7d4aceeb2e0321aaddbcef64e6d0424fe7a5c8c242533b1c1844",
+      "bytes": 165
+    },
+    {
+      "path": "resources/children/TEMPLATE.md",
+      "sha256": "2b424bf99a87312c7bdda286a4b0d0628208df5ff5a1c20ffb5c9bf0e9abadc3",
+      "bytes": 596
+    },
+    {
+      "path": "resources/context/COMPACTION.md",
+      "sha256": "bc86e488d677fb54530e71f0757f8a84441b91580b776dcd83332c00b6864032",
+      "bytes": 640
+    },
+    {
+      "path": "resources/contracts/CHARACTER-CONTRACT.txt",
+      "sha256": "cfbe5ce3701c62ca971aa4220b3109ecf6f688604d845b3daa40ec47b0cbdef3",
+      "bytes": 14519
+    },
+    {
+      "path": "resources/contracts/character.example.md",
+      "sha256": "5f774ab9d42d20bab9829cb1d625f84569279d1c08a5c867252da0bb245b56c1",
+      "bytes": 1880
+    },
+    {
+      "path": "resources/contracts/character.prompt.xml",
+      "sha256": "ab3adbdf3329c0d3997d7ea9b1411bc4d73e37c587cec5ee62ef9ee005bc375b",
+      "bytes": 2523
+    },
+    {
+      "path": "resources/contracts/character.schema.xsd",
+      "sha256": "dbdd84b431d9e3addcc22ab60abcaf20efd1d01dce706395b5873b2d3db99037",
+      "bytes": 8312
+    },
+    {
+      "path": "resources/contracts/culture.example.xml",
+      "sha256": "c6704344fbd062e28f4e28a3f178b48a06b13694c5bd1c1c193f6c99cd237fae",
+      "bytes": 2085
+    },
+    {
+      "path": "resources/contracts/culture.xsd",
+      "sha256": "861806e79a92976702820d7285da51adef4a9d2515fd7574c3c0f62677a5c993",
+      "bytes": 5883
+    },
+    {
+      "path": "resources/manifest.json",
+      "sha256": "3981bd5601055dfe5e47c2c69b06ecfa70d48a6a3a11fdcfd41983d9df04e9b5",
+      "bytes": 251
+    },
+    {
+      "path": "resources/policies/authoring.md",
+      "sha256": "7cf31c022992cebe220831db229aaf90b220a6152f4616edd220ee58cd2d038d",
+      "bytes": 1058
+    },
+    {
+      "path": "resources/policies/authority.md",
+      "sha256": "8db413b5536809dc3071c6d11c1e2d412521c9c44cb5b27121259a13c62c372f",
+      "bytes": 949
+    },
+    {
+      "path": "resources/policies/narration.md",
+      "sha256": "8f262139d97c1cfe38ae0c3851e5ebe04ebef7c5a522c653967da3ad419d6945",
+      "bytes": 771
+    },
+    {
+      "path": "resources/projection/character_xml.py",
+      "sha256": "3edded888c4252b1130705e56a90e01961166243c471eab07c5e630940988ae5",
+      "bytes": 4645
+    },
+    {
+      "path": "scripts/homer-build.mjs",
+      "sha256": "b0c394b9c91a1fd042716c12d0e0b16d38badf690c22e391739b9e6a46c36551",
+      "bytes": 701
+    },
+    {
+      "path": "scripts/homer-run.mjs",
+      "sha256": "879a2154d6ceb7aff55da9a4bb5d76ea40f99ca35c58687478dda29167b6a2cd",
+      "bytes": 1433
+    },
+    {
+      "path": "scripts/memweave-worker.py",
+      "sha256": "022f3f3671960512d1f95e2ddafe106a9d202fdec13617ca209a87cdcfa178a8",
+      "bytes": 3698
+    },
+    {
+      "path": "scripts/overhaul-disabled.mjs",
+      "sha256": "e2908a68221f39521567bee0ea5a7b3c8b244f40410e807288ad48e3dcf764b5",
+      "bytes": 168
+    },
+    {
+      "path": "scripts/overhaul-game.mjs",
+      "sha256": "f72e5a34ffcc65b5e414e4c105c3c0826db92a1580f506c47106fe2f41b1cb7d",
+      "bytes": 1135
+    },
+    {
+      "path": "scripts/overhaul-mcp.mjs",
+      "sha256": "b18f2bb86b76dcf4c6fb748bb49d2a6c9d2e580580645b7a5be2cf62ace28baf",
+      "bytes": 2443
+    },
+    {
+      "path": "scripts/overhaul-preview.mjs",
+      "sha256": "9284d54471d55a5fda9b6b491ab1260289e28a157570ad7bf82f97898761a286",
+      "bytes": 916
+    },
+    {
+      "path": "scripts/prepare-homer-local.mjs",
+      "sha256": "84e676d33afa530a7a50a4a7a89f0421bb605784961cb6e99ec8df25437f66a0",
+      "bytes": 5560
+    },
+    {
+      "path": "scripts/runtime-config.mjs",
+      "sha256": "456a6a2cb688a71b323d6d3c9cf98f040d5b8eb97dc9bf6c9f910a74e716c892",
+      "bytes": 16634
+    },
+    {
+      "path": "src/app.css",
+      "sha256": "1d70ff3f90e9a11681b5899c5e96a4878741a22a253a7ca7d9ebc18b00b4646e",
+      "bytes": 14416
+    },
+    {
+      "path": "src/app.d.ts",
+      "sha256": "92e72e720f3b81e97e32d17986dda1e39601780fb5892a07810a635bb50d55f2",
+      "bytes": 287
+    },
+    {
+      "path": "src/app.html",
+      "sha256": "577865017df720741789c5085d6f985860a8ebbea52d3107be61dead75b538ba",
+      "bytes": 857
+    },
+    {
+      "path": "src/homer-routes/+layout.svelte",
+      "sha256": "f4d662783032bc58cff11a56fe7c705677b4f19d999a05cf02d100de51bcbcde",
+      "bytes": 126
+    },
+    {
+      "path": "src/homer-routes/+page.svelte",
+      "sha256": "1b262f0e2a3a953e28b4784a3fbf27f16e97893f166261da7dfcc88448c6319a",
+      "bytes": 68
+    },
+    {
+      "path": "src/homer-routes/api/overhaul/+server.ts",
+      "sha256": "515d8e98e9a88ccb69317ddcb8bdcde813d0089d77f37e74acdb9b10d611cd9a",
+      "bytes": 64
+    },
+    {
+      "path": "src/homer-routes/api/turn/+server.ts",
+      "sha256": "53dd4dbacea69c23caf7f8214246edf8db6e26886281acdad8acb148a41396b9",
+      "bytes": 56
+    },
+    {
+      "path": "src/hooks.server.ts",
+      "sha256": "328cdc6050742152bd2c69bdb37f624efbc271fb70e42a43f4410a15269e8999",
+      "bytes": 1447
+    },
+    {
+      "path": "src/lib/assets/favicon.svg",
+      "sha256": "661012c8c6ace150b98ee77f42c9a675d8aa737b8ad1e9142f841a49374e0c4a",
+      "bytes": 375
+    },
+    {
+      "path": "src/lib/components/overhaul/AuthoringWorkbench.svelte",
+      "sha256": "e048574f2c8370210dbdb61e64befb179774d4687ecf9cedb8af26349561fba2",
+      "bytes": 10000
+    },
+    {
+      "path": "src/lib/components/overhaul/CampaignControls.svelte",
+      "sha256": "d1c0a4207ba6649b40e202ec664c42850f37e8510b1fc8bb3fff22bdcdd9f9d1",
+      "bytes": 18263
+    },
+    {
+      "path": "src/lib/components/overhaul/ChildAgents.svelte",
+      "sha256": "0fd811b8952cf67b1a75a5a5e9e6ed24bd07ed735b2f08341cc802918e5769f5",
+      "bytes": 7296
+    },
+    {
+      "path": "src/lib/components/overhaul/CultureEditor.svelte",
+      "sha256": "befbb2945027fda7b69d614519f2fe66264d1850e2a14b4a7f796a97b15c507a",
+      "bytes": 3505
+    },
+    {
+      "path": "src/lib/components/overhaul/DomainDetails.svelte",
+      "sha256": "cd54d9ef9228cfb873ac84e32d7876734b85ca4c92379338b3d45cfa4cecb0d6",
+      "bytes": 5135
+    },
+    {
+      "path": "src/lib/components/overhaul/DomainEditor.svelte",
+      "sha256": "55efa953220ff62dff9b6c80e398dee99f5bbdf7320a64992592d3a60211f1a8",
+      "bytes": 11091
+    },
+    {
+      "path": "src/lib/components/overhaul/GmInstructions.svelte",
+      "sha256": "f5e8c30524e277f44f3de9705b89fb16690be8326e729c52a273fceec15d0213",
+      "bytes": 6663
+    },
+    {
+      "path": "src/lib/components/overhaul/MemoryStatus.svelte",
+      "sha256": "3c23c3c186fcd1a25864b5eba36c7b9b500855a442ca855fa116242fe611cd34",
+      "bytes": 1405
+    },
+    {
+      "path": "src/lib/components/overhaul/OverhaulWorkbench.svelte",
+      "sha256": "8646170a493b1b08bd63b089267a5a8942b7db6bfe18cc24665a1b044a320c95",
+      "bytes": 44610
+    },
+    {
+      "path": "src/lib/components/overhaul/ProviderSettings.svelte",
+      "sha256": "aad5bdbe5a7efdd1668a31b6d9a6781ccb288c2035761e06e1658f5b924d5ecb",
+      "bytes": 13072
+    },
+    {
+      "path": "src/lib/components/overhaul/browserSession.mjs",
+      "sha256": "3dd8d8e6faef1b56253e553de2af7f4a36b6a9f2426110798f808c3a99a8c0a2",
+      "bytes": 1468
+    },
+    {
+      "path": "src/lib/components/overhaul/delivery.mjs",
+      "sha256": "5d221eb75a545e288e45814ce7a83e05f578372db40fb5fa8b68a832a4025b75",
+      "bytes": 1321
+    },
+    {
+      "path": "src/lib/components/overhaul/phoneViewport.mjs",
+      "sha256": "55a506e682d8d56d80fd3a337add08c418d85742c581e068ed0f18d29ca43dfe",
+      "bytes": 1549
+    },
+    {
+      "path": "src/lib/components/story/ActionInput.svelte",
+      "sha256": "7f882f2ad2b9bbf700164038976c98902fcf22a544fee61ab16a0acfed629c51",
+      "bytes": 4952
+    },
+    {
+      "path": "src/lib/components/story/FactionIntentions.svelte",
+      "sha256": "88f5edea98835da8319d86f466f429d8111c0eed71ba3a48368e3f1e0dde2d19",
+      "bytes": 10537
+    },
+    {
+      "path": "src/lib/components/story/StoryView.svelte",
+      "sha256": "bcb27036597773daeeb34c87698d8df9a4e8ba3d961566e6dc43651b97c33aef",
+      "bytes": 14901
+    },
+    {
+      "path": "src/lib/components/story/actionInput.ts",
+      "sha256": "80bca1e0c5f03be665f236b850d94f0e125db7575f460f94c967c1d98ec5c990",
+      "bytes": 4461
+    },
+    {
+      "path": "src/lib/components/story/readerState.ts",
+      "sha256": "da09030bf27a3cc6dd3573e94416aac38034fb98fd3ea45eca36791a78fc94ff",
+      "bytes": 291
+    },
+    {
+      "path": "src/lib/contracts/agreements.ts",
+      "sha256": "86c4a3db62f82afcac316d0b68a0ade968e70fbe51265770b63077b37e5448aa",
+      "bytes": 1584
+    },
+    {
+      "path": "src/lib/contracts/campaignState.ts",
+      "sha256": "7f943d7d4f183d0b876f1abad48f5bbe82644d0a59cccfdfdb44902a1bb2d1a0",
+      "bytes": 6811
+    },
+    {
+      "path": "src/lib/contracts/canonicalTypes.ts",
+      "sha256": "561cdb720e7f2a6f2851e396a6b28f1c1c906aa3518f89122586b9abeabe1bae",
+      "bytes": 3792
+    },
+    {
+      "path": "src/lib/contracts/content.ts",
+      "sha256": "0df1fda251496dd2c779656f967e3ed5a79d050d5219791718e3ee77056d8ea0",
+      "bytes": 7527
+    },
+    {
+      "path": "src/lib/contracts/contentContext.ts",
+      "sha256": "be520884c7cec4a87612078a3cde363643d38850477b8096210f545d0d5ecdf6",
+      "bytes": 97
+    },
+    {
+      "path": "src/lib/contracts/contentFields.ts",
+      "sha256": "0f1986f0bc2b13edee4dbf9f092415d695133fc7f7fb0ef8f83518a79e65406b",
+      "bytes": 1192
+    },
+    {
+      "path": "src/lib/contracts/contentFolders.ts",
+      "sha256": "c05891d0dbc95abed561df687fd7486c94bd65f15526371167a0237d606eecbb",
+      "bytes": 1792
+    },
+    {
+      "path": "src/lib/contracts/engine.ts",
+      "sha256": "18645bb19f3e0e050dd8cef2d64f16fa6633ee5a2a383aca8b6fe573f73fe198",
+      "bytes": 23434
+    },
+    {
+      "path": "src/lib/contracts/locationLore.ts",
+      "sha256": "27b7dd76260d9ed9e07be5a1d692755a1c62390c020c64db6c0c76b0511430b7",
+      "bytes": 2481
+    },
+    {
+      "path": "src/lib/contracts/memory.ts",
+      "sha256": "ceb5f4327ef0d1113595bbb79de9d5925e6e9181be8b9cb0c0bb48db93dabdfd",
+      "bytes": 44225
+    },
+    {
+      "path": "src/lib/contracts/npcAgency.ts",
+      "sha256": "9da22c27e5c4d5119791cc803aae4b31638c49f269f930c3ae9cf1e1b05b6f7b",
+      "bytes": 2011
+    },
+    {
+      "path": "src/lib/contracts/playerCapabilities.ts",
+      "sha256": "22ae1b77a8fdf566b2c1ad7496c3a9747af4b3cc8152b9e2bd69314ccd970232",
+      "bytes": 771
+    },
+    {
+      "path": "src/lib/contracts/sceneCheckpoint.ts",
+      "sha256": "fb361a3b48108edf229511cd23d44fa2f87dfbf00707de257630a720238d766f",
+      "bytes": 3558
+    },
+    {
+      "path": "src/lib/contracts/worldDraft.mjs",
+      "sha256": "e3c43c1c300fe1891284d177fe6dec483a12257902686362f82d5cbb9444b9e6",
+      "bytes": 2557
+    },
+    {
+      "path": "src/lib/server/ai/googleAgentPlatform.ts",
+      "sha256": "efd22fa753f22dc0e1ff18e600085080dabf7c8cfcc46ee7400aaf92e7a83088",
+      "bytes": 3561
+    },
+    {
+      "path": "src/lib/server/db/client.ts",
+      "sha256": "414b508fde3dadec531604ac93dc4dce069c2a854ddbe29d612f08db3ac948b5",
+      "bytes": 1231
+    },
+    {
+      "path": "src/lib/server/db/schema.ts",
+      "sha256": "ac5a0249779e41e5fe649202d4dbc7b6eb709d44924b8fb877f00af30a187fe3",
+      "bytes": 53469
+    },
+    {
+      "path": "src/lib/server/engine/apiCallLogs.ts",
+      "sha256": "22e87b8e7c6a47cc712ace30edb27dccd1505656c028664c3254bd86d7932ad3",
+      "bytes": 3973
+    },
+    {
+      "path": "src/lib/server/engine/serviceCommands.ts",
+      "sha256": "204c7805883b4a4e4f2491abd014bd71c7cd1ef6ba45cff2ab51e9f795eea242",
+      "bytes": 47898
+    },
+    {
+      "path": "src/lib/server/env.ts",
+      "sha256": "9fd4e8a496464bc5257bde6ea00884d03ad10d4942c3af424933cc1b70f61cb3",
+      "bytes": 1934
+    },
+    {
+      "path": "src/lib/server/factions/intentions.ts",
+      "sha256": "bf4cf5f82bc0ff6e9f97e64044d0abb399ea9650f2fac48bf7f209449f90090e",
+      "bytes": 17636
+    },
+    {
+      "path": "src/lib/server/factions/workflow.ts",
+      "sha256": "5c828ac1fe2c88c93e83e98714e9dbf7e7b2a9112e26f2f59111a5cff396240f",
+      "bytes": 37798
+    },
+    {
+      "path": "src/lib/server/jobs/outbox.ts",
+      "sha256": "b2a92f2c5efa0231e51117f97e0b094c7c37f0c2fc7d7b2bf3e44e57d5882976",
+      "bytes": 27009
+    },
+    {
+      "path": "src/lib/server/jobs/processor.ts",
+      "sha256": "df9e61637d2383ac293d132d9a726038712cd013b880df552006a1a5f4e3cd5a",
+      "bytes": 246921
+    },
+    {
+      "path": "src/lib/server/overhaul/accounting.mjs",
+      "sha256": "998ca2973e6addb7d4bdffc9ca98435a73e4b14e9561711620f86053058199e4",
+      "bytes": 8959
+    },
+    {
+      "path": "src/lib/server/overhaul/accounting.test.mjs",
+      "sha256": "8e3e7b1271d072ad3c6db6f6c61d0044e2ed9e7d6537c6826134660ca5a8027f",
+      "bytes": 8956
+    },
+    {
+      "path": "src/lib/server/overhaul/agentLoop.mjs",
+      "sha256": "b6693ff49b129b14f9f1281c2f46ded25e947a0946215fb8d0d1035012a8919d",
+      "bytes": 455
+    },
+    {
+      "path": "src/lib/server/overhaul/agentWorkspace.mjs",
+      "sha256": "d6ac22bcea928fbd7632e923438d9f60261330ccd182f8b3c9ee3108a5134fe5",
+      "bytes": 23287
+    },
+    {
+      "path": "src/lib/server/overhaul/agentWorkspace.test.mjs",
+      "sha256": "334656094649c4cad03e413f62e5e25bd4da4afe6f969c7315842aa7038b4eae",
+      "bytes": 13082
+    },
+    {
+      "path": "src/lib/server/overhaul/appraisal.mjs",
+      "sha256": "9d17644ced8e8fbdaaa1c6f6daac075033bbc56c7ba50fd5d0b729367cb3f6b3",
+      "bytes": 6427
+    },
+    {
+      "path": "src/lib/server/overhaul/appraisal.test.mjs",
+      "sha256": "751b32dbd5c7bc85539a9bbe22b50772ad141181bc5be964e699e386321a53cc",
+      "bytes": 11453
+    },
+    {
+      "path": "src/lib/server/overhaul/appraisalSchemas.mjs",
+      "sha256": "24ae28d6e00ee237a3f5d7b3cdb737bff9bdcf8c52233f3e680cd13c194bb7b1",
+      "bytes": 1832
+    },
+    {
+      "path": "src/lib/server/overhaul/assistant.mjs",
+      "sha256": "77980315db92c295da74aadae8025cfb2e09812edf2b73932835f7ac198cd538",
+      "bytes": 834
+    },
+    {
+      "path": "src/lib/server/overhaul/authorTools.mjs",
+      "sha256": "06f41faaca1680dcb887d4abfd02ae35438d8c954373386dcd9d181d20a98186",
+      "bytes": 3552
+    },
+    {
+      "path": "src/lib/server/overhaul/authoring.mjs",
+      "sha256": "8cdf59331cf6d3b951fad22819632a8f854848fc3104d4205ab088833a0444b4",
+      "bytes": 12418
+    },
+    {
+      "path": "src/lib/server/overhaul/authoring.test.mjs",
+      "sha256": "59554e81d7f2d606baaee00eba65ccf9fb552df92840e002db9edc65e0a10dab",
+      "bytes": 19250
+    },
+    {
+      "path": "src/lib/server/overhaul/campaignRegistry.mjs",
+      "sha256": "35449bbd7748e1d8e1f5db8f1e82a597d6cab0a81aec4596ecf3490e089efb08",
+      "bytes": 6428
+    },
+    {
+      "path": "src/lib/server/overhaul/campaignRegistry.test.mjs",
+      "sha256": "2178c7da36ef48373182d4d8ad132fecb2604f825569d74529f12f36e54afb9c",
+      "bytes": 8721
+    },
+    {
+      "path": "src/lib/server/overhaul/childResources.mjs",
+      "sha256": "c9c7c78aa1381f8df2b9e015a2e4ad7db9cdfcbe3ce456335fbef5b9273756b2",
+      "bytes": 7066
+    },
+    {
+      "path": "src/lib/server/overhaul/childWorker.mjs",
+      "sha256": "75f9d01cf80df390c3f5f1a55839dbfe7ef9461a5076e0234a77ae6e0deacc1b",
+      "bytes": 5820
+    },
+    {
+      "path": "src/lib/server/overhaul/clients.mjs",
+      "sha256": "56429667d582dccfca93b5fa16fa27ff54ccd79b270b867eea02f44022886883",
+      "bytes": 10602
+    },
+    {
+      "path": "src/lib/server/overhaul/clients.test.mjs",
+      "sha256": "8004ac16d79335ffa6fddd7c45d7edd2379007c8a8b0bdffaf452c99c5495bb4",
+      "bytes": 5111
+    },
+    {
+      "path": "src/lib/server/overhaul/context.mjs",
+      "sha256": "39354d8c3fb553dec52cb08873803925c1b9a11912824b2dee952d156ad9d1fd",
+      "bytes": 1408
+    },
+    {
+      "path": "src/lib/server/overhaul/contextAgents.test.mjs",
+      "sha256": "8135ab7f81bc333769205cbf388c7b2de3461de2fd7953f8b753d6806873eb35",
+      "bytes": 20542
+    },
+    {
+      "path": "src/lib/server/overhaul/contextCompaction.mjs",
+      "sha256": "ed705132f4a22f5e594c85cdfc1f2ffdb317ae6a37849060a24fd00d34710821",
+      "bytes": 7526
+    },
+    {
+      "path": "src/lib/server/overhaul/contextProjection.mjs",
+      "sha256": "d39214b77f5b022c4f2b57448c1fe68cbba2ed3ccc039d65bf3cdaa6d28b719b",
+      "bytes": 1858
+    },
+    {
+      "path": "src/lib/server/overhaul/controlSchemas.mjs",
+      "sha256": "ce0fe25c576340ae5872e0835b41b29b8ee3b8eaf8c9153358b0a5d7513c7ab4",
+      "bytes": 6985
+    },
+    {
+      "path": "src/lib/server/overhaul/controls.mjs",
+      "sha256": "be4dc0ef76cb07b9bc551064b17781af0aa5c50708026d3efc9179a6d58c1618",
+      "bytes": 6551
+    },
+    {
+      "path": "src/lib/server/overhaul/controls.test.mjs",
+      "sha256": "40e677b505b1649724e5bab4a3665b49864f0953125daa5c3f88f3554f1f0522",
+      "bytes": 13392
+    },
+    {
+      "path": "src/lib/server/overhaul/creation.test.mjs",
+      "sha256": "eb2cc06b9fdc1dc2032502000ea50477500cb1a7ac005162571b79473af6e6c8",
+      "bytes": 8389
+    },
+    {
+      "path": "src/lib/server/overhaul/cultureProjection.mjs",
+      "sha256": "c6a62a3d2426013ab6fd0edd78888dc3e8ecb8cd77ece63780ead489e54c3171",
+      "bytes": 13921
+    },
+    {
+      "path": "src/lib/server/overhaul/cultureProjection.test.mjs",
+      "sha256": "1218a5c4df1a4dd30b4976d33ec54659ea8c897f24e6743c7dbfeff51e94e1f0",
+      "bytes": 14836
+    },
+    {
+      "path": "src/lib/server/overhaul/cultureSchemas.mjs",
+      "sha256": "b40b53ff33b34afece018f74e35b83954e6f302b7d2995a6715ef170090c5b3f",
+      "bytes": 7215
+    },
+    {
+      "path": "src/lib/server/overhaul/decisions.mjs",
+      "sha256": "c4cc57ffffd784141b0bb6f0f262da52d8b2a2225f9b40d5299dfbcc26d67a1d",
+      "bytes": 12297
+    },
+    {
+      "path": "src/lib/server/overhaul/director-policy.mjs",
+      "sha256": "0fd5750c18f36d66ae35a3a1517ebc11f7d0411dc2150cb0cb5fa94074506087",
+      "bytes": 238
+    },
+    {
+      "path": "src/lib/server/overhaul/directorRetirement.test.mjs",
+      "sha256": "75f5910d338b2e3ab9d1269bbd81607d7e88a0fb95593811fe58fd53f96ee596",
+      "bytes": 4911
+    },
+    {
+      "path": "src/lib/server/overhaul/domainSchemas.mjs",
+      "sha256": "fc5438a574f606d39374365f10401c921bd14a3a83da6b1853ad28f19c32ca1e",
+      "bytes": 4470
+    },
+    {
+      "path": "src/lib/server/overhaul/domainSchemas.test.mjs",
+      "sha256": "387ba3190e2cfad21d19bab1ea1375f4a08391a1b20de0eccc61b32d334b1cb1",
+      "bytes": 15973
+    },
+    {
+      "path": "src/lib/server/overhaul/engine.mjs",
+      "sha256": "5f228f32ff9fe2faca1122857bbdf03d3fac1c3bc8177975133a3615f5b393d4",
+      "bytes": 31905
+    },
+    {
+      "path": "src/lib/server/overhaul/engine.test.mjs",
+      "sha256": "baa6f601b23c99a515fc11432955f4543a737f20ccd954a6a553a02e90c67c14",
+      "bytes": 6853
+    },
+    {
+      "path": "src/lib/server/overhaul/fixture.mjs",
+      "sha256": "fcf22337b77418b0c12ec956c7d85c4ee915d66e5e3be50bbdde74593e7ca985",
+      "bytes": 5339
+    },
+    {
+      "path": "src/lib/server/overhaul/general.test.mjs",
+      "sha256": "1a6a3e55fc0bd7ab44663c7e06c3d5a0f0c2063b6dd35c2767cb5eef123d0bf7",
+      "bytes": 12872
+    },
+    {
+      "path": "src/lib/server/overhaul/gmPrompt.mjs",
+      "sha256": "227e1e50635410b2727cd26d01dbd04bb1e6ed98d463ece2ec6ee77afffc11c1",
+      "bytes": 4934
+    },
+    {
+      "path": "src/lib/server/overhaul/gmResources.test.mjs",
+      "sha256": "5461960a6fde9107d8f24b49ff0f3f5434ea92988c1d43cd5b1ca340e61832d7",
+      "bytes": 16335
+    },
+    {
+      "path": "src/lib/server/overhaul/hostRuntime.mjs",
+      "sha256": "8356f4d6c524813afba0f4611464a51d6e0d08ff9a0b63a10b28dc7dde534a34",
+      "bytes": 2391
+    },
+    {
+      "path": "src/lib/server/overhaul/index.mjs",
+      "sha256": "c6049998002a411d44d8360d46d9f6531f7681c3e7a9eeb37f8c826671e226a6",
+      "bytes": 2136
+    },
+    {
+      "path": "src/lib/server/overhaul/index.test.mjs",
+      "sha256": "b21da70790f2464c0a1fde3b58d2efdba31bfd7130423453a42461a6927e34c8",
+      "bytes": 1693
+    },
+    {
+      "path": "src/lib/server/overhaul/integration.test.mjs",
+      "sha256": "5139a2580da005a10196279c9dd3ea6a8528294e8c9da2050ab101c504875b77",
+      "bytes": 22654
+    },
+    {
+      "path": "src/lib/server/overhaul/legacyMapping.mjs",
+      "sha256": "f8e45ada9d3c4593b4e61cccac34077d4a1098f33a052208049794391529f605",
+      "bytes": 4997
+    },
+    {
+      "path": "src/lib/server/overhaul/memoryLifecycle.mjs",
+      "sha256": "c517a51581b570fcd7fe7ecc868335c1677415b1e2c026537aca95864be75dbe",
+      "bytes": 8593
+    },
+    {
+      "path": "src/lib/server/overhaul/memoryLifecycle.test.mjs",
+      "sha256": "797ef59e8655030bbe55dd983dc6b3696ce62b1e8f80cc5c5130a88957931903",
+      "bytes": 10557
+    },
+    {
+      "path": "src/lib/server/overhaul/memweave.mjs",
+      "sha256": "2076e2e1021f55302f764d7b79ee8c391229893eb5b00e543aa4378d13e21394",
+      "bytes": 4399
+    },
+    {
+      "path": "src/lib/server/overhaul/memweave.test.mjs",
+      "sha256": "a217724ad62371aad974c9cbc029ca4f8c2a15b964ea74d407461cf365abffdd",
+      "bytes": 5258
+    },
+    {
+      "path": "src/lib/server/overhaul/memweaveCoordinator.mjs",
+      "sha256": "3d24687b0fe397083c65c13e51db0526aa7ec8e4ce41482cba5310794d18d995",
+      "bytes": 12088
+    },
+    {
+      "path": "src/lib/server/overhaul/memweaveCoordinator.test.mjs",
+      "sha256": "91899ce8ea683a2715cd9f0d9bd006bd939c7e343e537f9817d22a89139305f9",
+      "bytes": 15330
+    },
+    {
+      "path": "src/lib/server/overhaul/memweaveInvocationLedger.mjs",
+      "sha256": "3d94ecca381d8b68e1724b949cafb3126c3f55d41b80726e8a0dcf0a5794bb99",
+      "bytes": 2154
+    },
+    {
+      "path": "src/lib/server/overhaul/memweaveInvocationLedger.test.mjs",
+      "sha256": "990332ac254a2ae6895115a33b855ff0edf0be328d7783ea8d596dae71847319",
+      "bytes": 3140
+    },
+    {
+      "path": "src/lib/server/overhaul/narration.mjs",
+      "sha256": "e9ed9d2fb8d060364f3865421b2e58b6dbae302931a66b8495abc3860e9a14d9",
+      "bytes": 6576
+    },
+    {
+      "path": "src/lib/server/overhaul/operator.mjs",
+      "sha256": "eca74752d8e4449c7ee4546033d60f6e0c72b72b26a5dde049eec98189468a9e",
+      "bytes": 2205
+    },
+    {
+      "path": "src/lib/server/overhaul/operator.test.mjs",
+      "sha256": "2687b031aa981cda3d57682421ccd6eab3a55c86c2866c9a93feba82300c6ffb",
+      "bytes": 7116
+    },
+    {
+      "path": "src/lib/server/overhaul/phone.test.mjs",
+      "sha256": "3404b6d5ad49aed18c306104ae36bf59195b5fb8a5793a06a61d4d772441fd18",
+      "bytes": 4986
+    },
+    {
+      "path": "src/lib/server/overhaul/promptCaching.mjs",
+      "sha256": "2a063f094e3b5c03fab85fc7fac2b9f9850533bbf6f1e54822f07b851ec20266",
+      "bytes": 6230
+    },
+    {
+      "path": "src/lib/server/overhaul/providerAdapter.mjs",
+      "sha256": "9c75dca4b63806ed59686cb64408a2a798ce63fa40fe668121bd5ac88ac28472",
+      "bytes": 3925
+    },
+    {
+      "path": "src/lib/server/overhaul/providerCatalog.mjs",
+      "sha256": "f10805a33dbb1849673ba28242973ad1d13668f04a83fc6f8ebae5db6a39e6f2",
+      "bytes": 5616
+    },
+    {
+      "path": "src/lib/server/overhaul/providerRuntime.mjs",
+      "sha256": "8c704047cbc29d4f5ea74c1d6eb280133b6808d37d9adbd763d65c02e2583caa",
+      "bytes": 4983
+    },
+    {
+      "path": "src/lib/server/overhaul/providerStream.mjs",
+      "sha256": "9cef07408d8118c291b0268e40ec33bb055f7ece25639827827ffae74a81d956",
+      "bytes": 8967
+    },
+    {
+      "path": "src/lib/server/overhaul/providerStream.test.mjs",
+      "sha256": "8cb3dead3239c8fc3060ea18a4de5ce7ee7c4831b18640889b75fc87cdf859d2",
+      "bytes": 9935
+    },
+    {
+      "path": "src/lib/server/overhaul/providers.test.mjs",
+      "sha256": "0ba7881cdf39932393c237f2ae96a4d80f6599f2739974533be60ee8fc0dc07d",
+      "bytes": 10520
+    },
+    {
+      "path": "src/lib/server/overhaul/readiness.test.mjs",
+      "sha256": "5ca0386cda874cf29948843c41d8e9d396ec1c078534117d299da2c318249cd3",
+      "bytes": 14667
+    },
+    {
+      "path": "src/lib/server/overhaul/realModelQualification.mjs",
+      "sha256": "c69fc7e1e857a1f941bb05ecadc9c368c4daa1c1e27cdc9ee28d342f3b2a6a01",
+      "bytes": 3978
+    },
+    {
+      "path": "src/lib/server/overhaul/realModelQualification.test.mjs",
+      "sha256": "a0c1c5f7b7070a85749c60884ab8d43257f748a39e790fef32a40f144d74d05b",
+      "bytes": 4789
+    },
+    {
+      "path": "src/lib/server/overhaul/realModelRunner.mjs",
+      "sha256": "e0cc0a0033f76d59586f54ab2a0b13e25baebda9cb51ee5d68fc63c202ccb3a3",
+      "bytes": 6333
+    },
+    {
+      "path": "src/lib/server/overhaul/realModelRunner.test.mjs",
+      "sha256": "c70ddbafe5cdf8927ab39713e28e133494df1c00c607a1ebd803a13cf2686c73",
+      "bytes": 6315
+    },
+    {
+      "path": "src/lib/server/overhaul/resources.mjs",
+      "sha256": "6d9c0effd69534b21dbeed3fb0a34301ba1aeaf6c7d302c046517ec9365c7f53",
+      "bytes": 15113
+    },
+    {
+      "path": "src/lib/server/overhaul/runFence.mjs",
+      "sha256": "5dac9f66dbed0a83d80e4cce97f44219393993d8c64e605d5f8e1f8c125d9567",
+      "bytes": 240
+    },
+    {
+      "path": "src/lib/server/overhaul/runtime.mjs",
+      "sha256": "584b8956019673ee36fb89bed5ff565f38cb785a262b8db0e2968838dd2c1041",
+      "bytes": 4290
+    },
+    {
+      "path": "src/lib/server/overhaul/runtimeLease.mjs",
+      "sha256": "90a1d8c465497caf4aa2cadc8c7f37636cad8ea7484175786e5c56bc2924ea3e",
+      "bytes": 4264
+    },
+    {
+      "path": "src/lib/server/overhaul/runtimeLease.test.mjs",
+      "sha256": "49a8fcdacffc05b1aae59be477442ad982094bdf0372895855e205447365d713",
+      "bytes": 7651
+    },
+    {
+      "path": "src/lib/server/overhaul/sandbox.mjs",
+      "sha256": "40b076daeb7e44067ff80c00f7bc8f1f10967151eaa7547bd364ff88413ceff8",
+      "bytes": 13971
+    },
+    {
+      "path": "src/lib/server/overhaul/schemaUpgrade.mjs",
+      "sha256": "6221234ea8f6705a1584f4bd31cfb0c7fdc824ad3d283bf7b0da9e1b72e8cdf8",
+      "bytes": 2171
+    },
+    {
+      "path": "src/lib/server/overhaul/serverTransport.ts",
+      "sha256": "cf92ad1232d1288f02243b6b87067adfb1b500d902d9871a4759b970beaebfe2",
+      "bytes": 1453
+    },
+    {
+      "path": "src/lib/server/overhaul/service.mjs",
+      "sha256": "05322869fcb28515cbfe27babf026a3ed619e52b29dbc3f2ce4a7b8a21efd668",
+      "bytes": 4028
+    },
+    {
+      "path": "src/lib/server/overhaul/store.mjs",
+      "sha256": "860734951f4c26734f64404b6c646abd2035a88b639dd0118e0f933052a35742",
+      "bytes": 58928
+    },
+    {
+      "path": "src/lib/server/overhaul/store.test.mjs",
+      "sha256": "5110301f7e693d666e0bb4bdf073d47d726a448b5db2947ed296040ef9b8cb2d",
+      "bytes": 9665
+    },
+    {
+      "path": "src/lib/server/overhaul/syntheticTransport.mjs",
+      "sha256": "e6c7fdf817ca38318ebe0ff9f6b36bc7e0ebb3d12656d788d96f76ef3cd888f9",
+      "bytes": 8561
+    },
+    {
+      "path": "src/lib/server/overhaul/transport.mjs",
+      "sha256": "9b7c88b6a9845ad1367c74237cc1a2f171fa906b07a5d00b21b93a0adc690ce1",
+      "bytes": 12920
+    },
+    {
+      "path": "src/lib/server/overhaul/turn.mjs",
+      "sha256": "13fb49595364f68a61a735516a7d7bd25d6b6dddf5299ea040bf97a6d05a2be8",
+      "bytes": 1927
+    },
+    {
+      "path": "src/lib/server/overhaul/workflows.mjs",
+      "sha256": "36f02ac1e222058a798edfa35528dedc589b06b1dab0356df655124c0110cc52",
+      "bytes": 8308
+    },
+    {
+      "path": "src/lib/server/overhaul/worldDraft.test.mjs",
+      "sha256": "b355b70cd2e59924f96def33b03303734a37b36c1ce44c377b7dc2b02921b5cb",
+      "bytes": 2717
+    },
+    {
+      "path": "src/lib/server/plotBrain/planner.ts",
+      "sha256": "45f30ea5c1658ce501e5dd28b76fbc7a0d9474bff822cbd2dd59c04f9d7caf4c",
+      "bytes": 528
+    },
+    {
+      "path": "src/lib/server/plotBrain/reconciler.ts",
+      "sha256": "7ed9cd62a34153a753ee711513dbad34c58a1cb4d90f97e1b377c17bf71e81af",
+      "bytes": 29692
+    },
+    {
+      "path": "src/lib/server/turn/jev.ts",
+      "sha256": "145c6a7ef816d40a0b979011a5819f0d31bd9f05a0f21c3ba76ac2c43cabe688",
+      "bytes": 22927
+    },
+    {
+      "path": "src/lib/server/turn/provider.ts",
+      "sha256": "f1c240738409f1e01fbdc6c30f4074cb74014a35182ca2cb9f557da11fcc5e02",
+      "bytes": 46543
+    },
+    {
+      "path": "src/lib/server/turn/turnMemoryEnvelope.ts",
+      "sha256": "da4a7479ed53c2c8751fddcbb9778fe1bb9f9f07432d67b1d23558906ec79368",
+      "bytes": 4033
+    },
+    {
+      "path": "src/lib/server/turn/wellFormedText.ts",
+      "sha256": "d44555f824160f13a6a50927dd0ee0f746bea02d16f65d0579e82630c2bd778c",
+      "bytes": 773
+    },
+    {
+      "path": "src/lib/services/ai/context/controlInput.ts",
+      "sha256": "4f58be5bddc91c10d4f47e338896d2ba0dabeca504a98e3ceca1033c0856cd9f",
+      "bytes": 483
+    },
+    {
+      "path": "src/lib/services/ai/context/modelWindows.ts",
+      "sha256": "114c5ae6942920d3b8fda4bd850f54fe16c63c54942baf23d229183595b0f84e",
+      "bytes": 3463
+    },
+    {
+      "path": "src/lib/services/ai/context/parallelPov.ts",
+      "sha256": "dd196993e97a349a8b1b74d5ff5d2d9cea1a3cdecdfa896216fd836d856c4180",
+      "bytes": 5047
+    },
+    {
+      "path": "src/lib/services/ai/context/strategicFramePromptCard.ts",
+      "sha256": "363fd6bee5ac799ceb526dbe8ab23b4f8d671a38f452bf3188037b69c8c8ad08",
+      "bytes": 15244
+    },
+    {
+      "path": "src/lib/services/ai/sdk/providers/config.ts",
+      "sha256": "8d76425bd3246b2e7a0f407df39c6b3181b70e0773a4f197568578823512166e",
+      "bytes": 23459
+    },
+    {
+      "path": "src/lib/services/ai/sdk/schemas/smallBrain.ts",
+      "sha256": "19b24e1567777219bbe2803e4b5dabad6eb2afc4e30ec90c94f6f4fe40c242c8",
+      "bytes": 2225
+    },
+    {
+      "path": "src/lib/services/ai/tools/schemas.ts",
+      "sha256": "b33af7f956c9131ba904b8015f1777de80076e74a42144a10750f06d7de2a1d9",
+      "bytes": 37025
+    },
+    {
+      "path": "src/lib/services/chapterCadence.ts",
+      "sha256": "867aaa0fc9f76cbc9c7d830f90b7647e67f64b6195e4cf5a954aa9c648209bf2",
+      "bytes": 4025
+    },
+    {
+      "path": "src/lib/types/index.ts",
+      "sha256": "b885e4fc092f8827f91a7c164b3ed5af4645f9c6d4177a00b549880b09ee4eb2",
+      "bytes": 63106
+    },
+    {
+      "path": "src/lib/utils/tokens.ts",
+      "sha256": "74c629e865a345a31cde11a9d04219ac3960f84f876e0119b22536cec5d6590b",
+      "bytes": 1152
+    },
+    {
+      "path": "src/routes/+layout.svelte",
+      "sha256": "2604781c5af3860745e38ca6cc744e66da9b7a6045266d31a123ca91e3383d3a",
+      "bytes": 247
+    },
+    {
+      "path": "src/routes/+page.svelte",
+      "sha256": "ac6bb69a7d418bf6f4f30716d66334b3cbb941d966502d88a41a5328362a9c2b",
+      "bytes": 125
+    },
+    {
+      "path": "src/routes/api/overhaul/+server.ts",
+      "sha256": "0f7913b4eb799c8ead93d29645caabab1f173cef51b8e1e678d4c7d2e02d9a0b",
+      "bytes": 5421
+    },
+    {
+      "path": "src/routes/api/turn/+server.ts",
+      "sha256": "f4e50d7a5ee304f349c26fe9dc0a8347dd9a6007bceb0fd45f96e791d705b40d",
+      "bytes": 587
+    },
+    {
+      "path": "src/service-worker.ts",
+      "sha256": "2f1f3b152fd2c3c7afa3c12ec12aad7f267047e7379ad512d91bd3bfe0cb69c6",
+      "bytes": 1382
+    },
+    {
+      "path": "static/icons/homer-192.png",
+      "sha256": "900be56561a0781da085762399af5e237cfd356f56e642f496d37d78fd916c25",
+      "bytes": 664
+    },
+    {
+      "path": "static/icons/homer-512.png",
+      "sha256": "b90302bffe9137fef4b8e358e65f05e758429b269ed5b3fcd17dbd179c77bccb",
+      "bytes": 3192
+    },
+    {
+      "path": "static/icons/homer-apple-touch-icon.png",
+      "sha256": "9f4c9361c5a91f63b542a77dcef6cd794d735ce2405cd48743d64b7d7b8ad7ab",
+      "bytes": 602
+    },
+    {
+      "path": "static/icons/homer-maskable-512.png",
+      "sha256": "f438a192acc9a3b00659c7f110664ea7903d9c7f4ecc10b212cddf1bd020c6e9",
+      "bytes": 2896
+    },
+    {
+      "path": "static/icons/homer-sigil.svg",
+      "sha256": "b5af4424cc8d8d9e70398dfacfd2a3afa24c7da4986b4f2ebc78d072270da7de",
+      "bytes": 334
+    },
+    {
+      "path": "static/manifest.webmanifest",
+      "sha256": "4104e19794db4d7c795c40f29f2c03f18cdd3abcb2ca2933ded5563a3217ffd9",
+      "bytes": 780
+    },
+    {
+      "path": "static/offline.html",
+      "sha256": "0614a2567bb4bd4a43f5aeeccf235ed3a00ced91a32ef0843d06094558b90035",
+      "bytes": 683
+    },
+    {
+      "path": "static/robots.txt",
+      "sha256": "5eae60ed129937b16945ab9b22009e4cf363a909fdbdeefd2cdac109a04a9429",
+      "bytes": 66
+    },
+    {
+      "path": "svelte.config.js",
+      "sha256": "f4d72c7a9ac3e2bfa04199d1a44725dba221e6b94bbfc97b8b0cd9c984ae5609",
+      "bytes": 365
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "4a9ed6bf7661adfbd6bebddd2023157d3ae6154859d2e19f432de515cdc7fb1d",
+      "bytes": 732
+    },
+    {
+      "path": "tsconfig.overhaul-check.json",
+      "sha256": "42f881c24f527aab5cb627bb9cde76825e105220b4fa7b0b914aa633f7135af9",
+      "bytes": 493
+    },
+    {
+      "path": "vite.overhaul.config.mjs",
+      "sha256": "ed51c134a7baf115c5b97f4347b8099a468fc2fc31e29e136d88a961f8429575",
+      "bytes": 437
+    }
+  ]
+}

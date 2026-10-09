@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "checkJs": false,
+    "noEmit": true
+  },
+  "include": [
+    "src/lib/contracts/locationLore.ts",
+    "src/lib/contracts/contentContext.ts",
+    "src/lib/contracts/content.ts",
+    "src/hooks.server.ts",
+    "src/routes/api/overhaul/+server.ts",
+    "src/routes/api/turn/+server.ts",
+    "src/lib/server/overhaul/serverTransport.ts",
+    ".svelte-kit/ambient.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.test.*"
+  ]
+}
